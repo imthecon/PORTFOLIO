@@ -12,8 +12,8 @@ dist
 dist-ssr
 *.local
 
+.gitignore
 CNAME
-.vs
 
 # Editor directories and files
 .vscode/*
