@@ -1,0 +1,523 @@
+<!-- source ~/.nvm/nvm.sh <- load in nvm on start-up -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sarder's Portfolio</title>
+    <meta name="author" content="Sarder">
+    <meta name="description" content="Welcome to Sarder's website.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="fog">
+    <script type="module" src="/main.js"></script>
+
+    <header id="home">
+        <!-- Home -->
+            <!-- Scroll watcher-->
+        <div class="scroll-watcher"></div>
+
+            <!-- Parallax background -->
+        <section id="hero">
+            <img src="img/l8.png" id="l1" class="noBorder">
+            <img src="img/l7.png" id="l2" class="noBorder">
+            <img src="img/l6.png" id="l3" class="noBorder">
+            <img src="img/l5.png" id="l4" class="noBorder">
+            <img src="img/l4.png" id="l5" class="noBorder">
+            <img src="img/l3.png" id="l6" class="noBorder">
+            <img src="img/l2.png" id="l7" class="noBorder">
+            <img src="img/l1.png" id="l8" class="noBorder">
+            <h1 id="parallax-text">hi, i'm sarder,</h1>
+            <h3 id="parallax-text2"><i>an aspiring student preparing to enter the real world.</span></i></h3>
+        </section>
+        <div class="media">
+            <div class="media-items fadeIn public-sans">
+                <div>
+                    <img src="img/linkedin.svg" alt="LinkedIn" class="media-item noBorder">
+                    <a href="https://www.linkedin.com/in/sardertanjilur/" class="rb-ul-a">Sarder Tanjilur</a>
+                </div>
+                    <!-- <img src="img/github.svg" alt="GitHub"> -->
+                <div>
+                    <img src="img/instagram.svg" alt="Instagram" class="media-item noBorder">
+                    <a href="https://www.instagram.com/sxrder/" class="rb-ul-a">@sxrder</a>
+                </div>
+                <div>
+                    <img src="img/discord.svg" alt="Discord" class="media-item noBorder">
+                    <a href="https://discord.com/channels/@me" class="rb-ul-a">imthecon</a>                
+                </div>
+            </div>
+        </div>
+        <script>
+            let l1 = document.getElementById("l1");
+            let l2 = document.getElementById("l2");
+            let l3 = document.getElementById("l3");
+            let l4 = document.getElementById("l4");
+            let l5 = document.getElementById("l5");
+            let l6 = document.getElementById("l6");
+            let l7 = document.getElementById("l7");
+            let l8 = document.getElementById("l8");
+            let l9 = document.getElementById("parallax-text");
+            let l10 = document.getElementById("parallax-text2");
+
+            window.addEventListener('scroll', function(){
+                var value = window.scrollY;
+
+                l2.style.top = value * 0.9 + 'px';
+                l3.style.top = value * 1 + 'px';
+                l4.style.top = value * 0.8 + 'px';
+                l5.style.top = value * 0.7 + 'px';
+                l6.style.top = value * 0.6 + 'px';
+                l7.style.top = value * 0.5 + 'px';
+                l9.style.top = value * 1.325 + 'px';
+                l10.style.top = value * 1.25 + 'px';
+            })
+        </script>
+    </header>
+
+    <main id="body">
+        <article>
+            <br><br><br><br><br><br><br><br><br id="selection-area"><br><br><br><br><br><br><br><br><br><br><br>
+            
+            <!-- Section selector -->
+            <div data-tilt data-tilt-full-page-listening id="menu" class="full-card">
+                <p class="fadeIn" id="menu-items" class="glow">
+                    <a href="#home" class="menu-item rb-glow">Home / hero</a>
+                    <a href="#about" class="menu-item rb-glow">About me</a>
+                    <a href="#work-experience" class="menu-item rb-glow">Work exp.</a>
+                    <a href="#portfolio" class="menu-item rb-glow">My portfolio</a>
+                    <!-- <a href="#gallery" class="menu-item"><s>My gallery</s></a> -->
+                    <a href="#contact" class="menu-item rb-glow">Contact me</a>
+                </p>
+            </div>
+
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            
+            <!-- Back to top -->
+            <a id="top" href="#selection-area">≡</a>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    var backToTop = document.getElementById("top");
+                    // const aboutMePosition = document.getElementById("about").getBoundingClientRect().top;
+
+                    function updateButtonVisibility() {
+                        if (window.scrollY > 1500) {
+                            backToTop.classList.add("visible");
+                        } else {
+                            backToTop.classList.remove("visible");
+                        }
+                    }
+
+                    updateButtonVisibility();
+
+                    window.onscroll = updateButtonVisibility;
+                });
+            </script>
+        </article>
+
+    <!-- About me -->
+        <article id="about">
+            <canvas id="bg" class="fadeInBg"></canvas>
+            <br>
+            
+            <h2>🡪 About me</h2>
+
+            <div class="container-a fadeIn">
+                <div class="box card">
+                    <div class="box-text">
+                        <div class="big fadeIn dm-sans">G</div>
+                        <h3>my goal.</h3>
+                        <p>Hey. I'm Sarder, a 16 year old student managing his way around life. I want to create programs and develop software that creates a positive and, eventually, global impact. Whether it be providing advice that can be directly applied into life or creating a robot that can perform surgery with over 99% accuracy, change for the better is the ultimate goal.</p>
+                    </div>
+                </div>
+                <div class="box card">
+                    <div class="box-text">
+                        <div class="big fadeIn dm-sans">FFFF</div>
+                        <h3>about the future...</h3>
+                        <p>As a tech-geek high schooler in his senior years, I understand the importance of choosing a straight career path, but I don't think it could get any harder in the modern era of technology.</p>
+                        <p>With AI taking over a lot of future tech major choices (hmm, DEVIN), I'm thinking, "If we can't fix the problem, why don't we just join the problem?" Yeah, it sounds sort of stupid, but I'm desperately on my last attempts to put my knowledge and learning to good use in life, and I can't be the only one thinking this way. So, I don't know about you, but going into AI development sounds amazing right about now.</p>
+                    </div>
+                </div>
+                <div class="box card">
+                    <div class="box-text">
+                    <div class="big fadeIn dm-sans">WW</div>
+                        <h3>check out <b>my work</b>!</h3>
+                        <p>If you want to check out my work, click on the PORTFOLIO tab to check out my recent work revolving around programming, neural networks and whatnot. Check out my GALLERY/ SHOWCASE tab to take a look at some of the more school-based, learning projects I'm proud of.</p>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+        </article>
+    
+    <!-- Work experience -->
+        <article id="work-experience">
+            <br>
+
+            <h2>🡪 Work experience</h2>
+
+            <section id="science-world fadeIn">
+                <div class="container-we fadeIn">
+                    <div class="box-text">
+                        <h3 class="public-sans title"><b>SCIENCE WORLD @ Vancouver, B.C. (July - August 2023)</b></h3>
+                        <p>First image - Adi K via https://www.pexels.com/photo/science-world-by-lake-in-vancouver-18197132/</p>
+                        <div class="card box">
+                            <h3 class="topic">Responsibilites:</h3>
+                            <ul>
+                                <li>Providing visitors with a friendly, awesome, and memorable experience.</li>
+                                <li>Providing learning opportunities and information to family and children through gallery walkthroughs, demonstrations, and explanations.</li>
+                                <li>Assisting with school group entry and exits during school visits.</li>
+                                <li>Assisting with security measures and lost children/family searches.</li>
+                                <li>Modelling and reinforcing Science World's health, safety, and security policies.</li>
+                                <li>Answering any questions asked by visitors.</li>
+                                <li>Cooperating with staff and coworkers to ensure fluid operation and communication.</li>
+                            </ul>
+                        </div>
+                        <div class="card box">
+                            <h3 class="topic">What I learned:</h3>
+                            <p>During my volunteer work at Science World, I regularly guided galleries and exhibits to visitors of all ages, ensuring clear and understandable explanations.</p>
+                            <p>Working alongside a diverse team of student and expert coworkers, we optimized a well-flowing workspace, allowing everyone to perform their duties as efficiently as possible. </p>
+                            <p>My experience at Science World completely refined my ability in effectively communicating complex information, working in a team setting, and adapting to different responsibilities.</p>
+                        </div>
+                        <div class="card box">
+                            <h3 class="topic">My gratitude:</h3>
+                            <p>I'm grateful to all my peers who volunteered in the same cohort for making every single moment a fun and enjoyable one. They were the ones who entertained me during my breaks, made me confident in demonstrating activities to children, and brought a smile to my face at any time.</p>
+                            <p>A big, big thanks to all of the official Science Facilitators at Science World and my HSWE employer. I thank them for not only giving me the opportunity to work at such a lively place at a beautiful location but to teach me so much that I could take away. They helped me realize that the work industry is as wonderful as you make it.</p>
+                            <!-- <p>As a final note, I enjoyed every moment of my placement (especially the one-hour long lunch breaks). If I ever had the chance, I would go back and do it all over again.</p> -->
+                        </div>
+                    </div>
+                    <div class="box-img">
+                        <img src="https://images.pexels.com/photos/18197132/pexels-photo-18197132/free-photo-of-science-world-by-lake-in-vancouver.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Tap Transit - title page" class="card big-img">
+                        <div class="we-gallery">
+                            <img id="#1" src="img/lego.PNG" alt="BrickWorks at Science World" class="card">
+                            <img id="#2" src="img/brick towers.PNG" alt="Tower Knockdown at Science World" class="card">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br>
+        </article>
+
+    <!-- My portfolio -->
+        <article id="portfolio">
+            <br>
+
+            <h2>🡪 My portfolio</h2>
+
+            <article id="portfolio-sub">
+                <section class="big-card fadeIn">
+                    <div class="project-header project-one">
+                        <br><br>
+                        <div>
+                            <img src="img/tt logo.png" alt="Tap Transit - a Metro-Vancouver based cookie clicker" title="Tap Transit" class="pf-title noBorder">
+                            <img src='img/pythonlogo.png' class="tools box-glow">
+                            <img src='img/pygame.png' class="tools box-glow">
+                            <img src='img/piskel logo.png' class="tools box-glow">
+                        </div>
+                        <div class="drag-info">
+                            <p><i>*Drag on gallery to switch slides</i></p>
+                        </div>
+                    </div>
+                    <div class="container-p">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="img/tt title page.png" alt="Tap Transit - title page" height="450">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/tt gameplay.png" alt="Tap Transit - gameplay" height="450">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/tt itch page.png" alt="Tap Transit - itch page" height="450">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/tt piskel.png" alt="Tap Transit - piskel test" height="450">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="box-text">
+                            <p class="card bigger dm-sans"><b>A <span class="kaushan-script">Metro Vancouver-based cookie clicker game</span> created entirely using the pygame plugin (Python 3.11).</b></p>
+                            <div class="card text-details">
+                                <p><b>Approximate time taken</b>: 1 month and 14 days.</p>
+                                <p><b>Difficulty</b>: 3/5 (Intermediate)</p>
+                                <p><b>Experience gained</b>:</p>
+                                <ul>
+                                    <i>
+                                        <li>
+                                            <p>Learned to create sprites and backgrounds thematically.</p>
+                                        </li>
+                                        <li>
+                                            <p>Learned the basis of object-oriented programming in Python.</p>
+                                        </li>
+                                        <li>
+                                            <p>Transformed original ideas into content for a video game.</p>
+                                        </li>
+                                        <li>
+                                            <p>Brainstormed and constructed mechanics, progression systems, reset systems, etc.</p>
+                                        </li>
+                                        <li>
+                                            <p>Working with cross-language libraries such as json.</p>
+                                        </li>
+                                    </i>
+                                </ul>
+                                <p class="big"><b>Download link</b>: <i><a href="https://imthecon.itch.io/tap-transit" class="rb-ul-a">https://imthecon.itch.io/tap-transit</a></i></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <br>
+                <section class="big-card fadeIn">
+                    <div class="project-header project-two big-card">
+                        <div>
+                            <p class="pf-title">hi, i'm sarder</p>
+                            <img src='img/html logo.png' class="tools box-glow">
+                            <img src='img/css logo.png' class="tools box-glow">
+                            <img src='img/js logo.png' class="tools box-glow">
+                            <img src='img/threejs logo.png' class="tools box-glow">
+                            <img src='img/blender logo.png' class="tools box-glow">
+                        </div>
+                        <div class="drag-info">
+                            <p><i>*Drag on gallery to switch slides</i></p>
+                        </div>
+                    </div>
+                    <div class="container-p">
+                        <div class="box-text">
+                            <p class="card bigger dm-sans"><b>A <span class="kaushan-script">portfolio website</span> (the one you're on right now) created from scratch after self-learning HTML, CSS, and JavaScript (Vanilla, Three.js).</b></p>
+                            <div class="card text-details">
+                                <p><b>Approximate time taken</b>: Work in progress...</p>
+                                <p><b>Difficulty</b>: 4/5 (Advanced)</p>
+                                <p><b>Experience gained</b>:</p>
+                                <ul>
+                                    <i>
+                                        <li>
+                                            <p>Learned proficiency in HTML, Vanilla CSS, and (a little bit of) Vanilla JavaScript.</p>
+                                        </li>
+                                        <li>
+                                            <p>Learned how to implement JS libraries like Vanta (for backgrounds), Three.js (for 3D objects), Swiper (for image carousels), and Lenis (for smooth scrolling).</p>
+                                        </li>
+                                        <li>
+                                            <p>Developed modern and usique web design.</p>
+                                        </li>
+                                        <li>
+                                            <p>Created sections with relevant personal info which can define me in a professional environment.</p>
+                                        </li>
+                                        <li>
+                                            <p>Created and implemented 3D graphics using Blender and Three.js.</p>
+                                        </li>
+                                    </i>
+                                </ul>
+                                <p class="big"><b>Website link</b>: <span class="rb-ul-a">CURRENTLY UNAVAILABLE</span></p>
+                            </div>
+                        </div>
+                        <div class="p-gallery">
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="img/about me.png" alt='"about me" page' height="450">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/menu.png" alt='"menu" page' height="450">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/gallery.png" alt="Tap Transit gallery" height="450">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/title page.png" alt="title page" height="450">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <br>
+            </article>
+        </article>
+    <!-- My gallery -->
+        <!-- <article id="gallery">
+            <br>
+
+            <h2>My gallery</h2>
+
+            <div class="container-g">
+                <div class="box">
+                    <div>
+                        <br><br><br>
+                        <h3>i'm anxious to learn</h3>
+                        <p class="bigger"><b>This is an infographic about anxiety, defining the topic, suggesting methods of treatments, and listing statistics.</b></p>
+                        <p>I created this for a Physical Education project in grade ten. My teacher told us if we plagiarized an infographic created by someone else in the past, he wouldn't care. Although, I got hooked on learning about anxiety myself once I started, so I took the assignment relatively seriously, and this is how it turned out.</p>
+                    </div>
+                    <div>
+                        <figure>
+                            <img src="img/lab.png" alt="learn about anxiety - A Personal Health Infographic" title="learn about anxiety - A Personal Health Infographic">
+                        </figure>
+                    </div>
+                </div>
+                <div class="box">
+                    <div>
+                        <br><br><br>
+                        <h3>Sarder's Vision Board</h3>
+                        <p class="bigger"><b>This is an infographic known as a "vision board", showing the interests, hobbies, and goals in the creator's future.</b></p>
+                        <p>Similar to the previous infographic, I created this in grade 10 but for a Career Life Education class. This really helped me to dig deep and find out about the things that truly define me as a person.</p>
+                        <p>Try to make out some of the things I've scrambled on there, maybe you'll learn more about me than what you'd find on my "ABOUT ME" page.</p>
+                    </div>
+                    <div>
+                        <figure>
+                            <img src="img/vb.png" alt="Sarder's Vision Board" title="Sarder's Vision Board">
+                        </figure>
+                        </div>
+                    </div>
+                <div class="box">
+                    <div>
+                        <br><br><br>
+                        <h3>social media balance</h3>
+                        <p class="bigger"><b>This is a two-paged poster about balancing out social media use in your life, relaying information about social media addiction, pros and cons, Canadian youth statistics, and methods to reducing use.</b></p>
+                        <p>Just like the vision board prior, this was also created for my CLE 10 class. Created by my friend Zack and I, we presented this to the class. I'm proud of this one because our teacher liked it enough to print and place the two posters on the windows of our Student Services room (a place with somewhat high traffic throughout the day).</p>
+                    </div>
+                    <div>
+                        <figure>
+                            <img class="doubleImage" src="img/smb1.png" alt="social media balance - Section 1" title="social media balance - Section 1">
+                            <img class="doubleImage" src="img/smb2.png" alt="social media balance - Section 2" title="social media balance - Section 2">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </article> -->
+
+    <!-- Contact me -->
+        <article id="contact">
+            <br>
+
+            <h2>🡪 Contact me</h2>
+
+            <section class="contact fadeIn">
+                <form action="https://formsubmit.co/sarderinquiries@gmail.com" method="post">
+                    <p>
+                        <input type="text" name="name" id="name" placeholder="Full name" autocomplete="on" class="input" required>
+                    </p>
+                    <p>
+                        <input type="email" name="email" id="email" placeholder="E-mail" autocomplete="on" class="input" required>
+                    </p>
+                    <p>
+                        <textarea name="message" id="message" cols="50" rows="10" placeholder="Type your message here." class="input message" required></textarea>
+                    </p>
+                    <button type="submit" class="submit" value="send">Submit</button>
+                </form>
+                <div class="card">
+                    <p><i><b><span class="bigger">Let me know if you have any project requests or would just like to know me better!</span></i></b></p>
+                </div>
+            </section>
+            <br><br><br>
+            <section class="footer">
+                <p>All content on this website is not to be representative of me anywhere else without permission. &copy; 2024 Sarder T.</p>
+            </section>
+            <br>
+        </article>
+    </main>
+
+    <footer>
+        <!-- Smooth scrolling by Lenis -->
+        <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+
+        <script>
+            const lenis = new Lenis({
+              lerp: 0.075, 
+              wheelMultiplier: 0.85,
+            });
+            
+            function raf(time) {
+              lenis.raf(time);
+              requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+
+            // solution to ID jumping (found on https://stackoverflow.com/questions/77387611/smooth-scroll-doesnt-work-with-lenis-when-link-with-id-clicked) //
+            document.querySelectorAll('a[href^="#"]').forEach((el) => {
+                el.addEventListener('click', (e) => {
+                    e.preventDefault()
+                    const id = el.getAttribute('href')?.slice(1)
+                    if (!id) return
+                    const target = document.getElementById(id)
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' })
+                    }
+                })
+            })
+        </script>
+        
+        <!-- Tilting cards with Vanilla Tilt -->
+        <script src="vanilla-tilt.js"></script>
+        <script type="text/javascript">
+            VanillaTilt.init(document.querySelectorAll(".card"), {
+                transition: true,
+                speed: 1000,
+                max: 10,
+            });
+
+            VanillaTilt.init(document.querySelectorAll(".full-card"), {
+                transition: true,
+                speed: 1000,
+                max: 1,
+            });
+
+            VanillaTilt.init(document.querySelectorAll(".big-card"), {
+                transition: true,
+                speed: 1000,
+                max: 1,
+            });
+        </script>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                effect: "coverflow",
+                grabCursor: true,
+                loop: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                coverflowEffect: {
+                    rotate: -20,
+                    stretch: 600,
+                    depth: 900,
+                    slideShadows: false
+                },
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            });
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+        <script>
+            VANTA.FOG({
+                el: "#fog",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                highlightColor: 0x000000,
+                midtoneColor: 0x000000,
+                lowlightColor: 0x0,
+                baseColor: 0xc0c0c
+            })
+        </script>
+
+    </footer>
+</body>
+
+</html>
