@@ -892,7 +892,7 @@ p, li {
 
     .contact div:hover {
         opacity: 1;
-        scale: 1;
+        scale: 0.9 !important;
     }
 
     .contact div::before {
@@ -1017,6 +1017,7 @@ p, li {
 
     .contact .card {
         margin-top: 2rem;
+        padding: 0.5rem;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -1024,9 +1025,8 @@ p, li {
 
     .contact .card .bigger {
         font-size: 1rem;
-        line-height: 0rem;
-        padding: 1rem;
-        text-align: center;
+        line-height: 0.5;
+        text-align: center !important;
     }
 }
 
