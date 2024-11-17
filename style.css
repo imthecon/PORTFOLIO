@@ -141,10 +141,6 @@ img {
     padding: 0;
 }
 
-main h2 {
-    text-indent: 2vw;
-}
-
 .footer {
     text-indent: 3.5vw;
 }
@@ -314,6 +310,7 @@ p, li {
 @media (max-width: 896px) {
     canvas {
         display: none;
+        pointer-events: none;
     }
 
     #hero {
