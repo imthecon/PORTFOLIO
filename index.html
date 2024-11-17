@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Sarder's Portfolio</title>
+    <title>hi, i'm sarder</title>
     <meta name="author" content="Sarder">
     <meta name="description" content="Welcome to Sarder's website.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,36 +23,38 @@
         <div class="scroll-watcher"></div>
 
             <!-- Parallax background -->
-        <section id="hero">
-            <img src="img/l8.png" id="l1" class="noBorder">
-            <img src="img/l7.png" id="l2" class="noBorder">
-            <img src="img/l6.png" id="l3" class="noBorder">
-            <img src="img/l5.png" id="l4" class="noBorder">
-            <img src="img/l4.png" id="l5" class="noBorder">
-            <img src="img/l3.png" id="l6" class="noBorder">
-            <img src="img/l2.png" id="l7" class="noBorder">
-            <img src="img/l1.png" id="l8" class="noBorder">
-            <h1 id="parallax-text">hi, i'm sarder,</h1>
-            <h3 id="parallax-text2"><i>an aspiring student preparing to enter the real world.</span></i></h3>
-        </section>
         <div class="media">
-            <div class="media-items fadeIn public-sans">
+            <div id="hero">
+                <!-- <img src="img/l8.png" id="l1" class="noBorder">
+                <img src="img/l7.png" id="l2" class="noBorder">
+                <img src="img/l6.png" id="l3" class="noBorder">
+                <img src="img/l5.png" id="l4" class="noBorder">
+                <img src="img/l4.png" id="l5" class="noBorder">
+                <img src="img/l3.png" id="l6" class="noBorder">
+                <img src="img/l2.png" id="l7" class="noBorder">
+                <img src="img/l1.png" id="l8" class="noBorder"> -->
                 <div>
-                    <img src="img/linkedin.svg" alt="LinkedIn" class="media-item noBorder">
-                    <a href="https://www.linkedin.com/in/sardertanjilur/" class="rb-ul-a">Sarder Tanjilur</a>
+                    <h1>hi, i'm sarder,</h1>
+                    <h3><i>an aspiring student preparing to enter the real world.</span></i></h3>
                 </div>
-                    <!-- <img src="img/github.svg" alt="GitHub"> -->
-                <div>
-                    <img src="img/instagram.svg" alt="Instagram" class="media-item noBorder">
-                    <a href="https://www.instagram.com/sxrder/" class="rb-ul-a">@sxrder</a>
-                </div>
-                <div>
-                    <img src="img/discord.svg" alt="Discord" class="media-item noBorder">
-                    <a href="https://discord.com/channels/@me" class="rb-ul-a">imthecon</a>                
+                <div class="media-items public-sans">
+                    <div>
+                        <img src="img/linkedin.svg" alt="LinkedIn" class="media-item noBorder">
+                        <a href="https://www.linkedin.com/in/sardertanjilur/" class="rb-ul-a">Sarder Tanjilur</a>
+                    </div>
+                        <!-- <img src="img/github.svg" alt="GitHub"> -->
+                    <div>
+                        <img src="img/instagram.svg" alt="Instagram" class="media-item noBorder">
+                        <a href="https://www.instagram.com/sxrder/" class="rb-ul-a">@sxrder</a>
+                    </div>
+                    <div>
+                        <img src="img/discord.svg" alt="Discord" class="media-item noBorder">
+                        <a href="https://discord.com/channels/@me" class="rb-ul-a">imthecon</a>                
+                    </div>
                 </div>
             </div>
         </div>
-        <script>
+        <!-- <script>
             let l1 = document.getElementById("l1");
             let l2 = document.getElementById("l2");
             let l3 = document.getElementById("l3");
@@ -76,7 +78,7 @@
                 l9.style.top = value * 1.325 + 'px';
                 l10.style.top = value * 1.25 + 'px';
             })
-        </script>
+        </script> -->
     </header>
 
     <main id="body">
@@ -426,8 +428,8 @@
 
         <script>
             const lenis = new Lenis({
-              lerp: 0.075, 
-              wheelMultiplier: 0.85,
+              lerp: 0.15, 
+              wheelMultiplier: 1,
             });
             
             function raf(time) {

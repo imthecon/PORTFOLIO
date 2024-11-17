@@ -1,3 +1,7 @@
+window.addEventListener('load', function() {
+  window.scrollTo(0, 0);
+});
+
 // THREE.JS
 import './style.css';
 import * as THREE from 'three';
@@ -203,12 +207,12 @@ function scaleObject(object, targetScale, duration = 250) {
 
 document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', function() {
-    const section1Top = document.getElementById('about').offsetTop;
+    const section1Top = document.getElementById('home').offsetTop - 1000;
     const section2Top = document.getElementById('work-experience').offsetTop;
     const section3Top = document.getElementById('portfolio').offsetTop;
     const section4Top = document.getElementById('contact').offsetTop;
 
-    const scrollPosition = (window.scrollY + window.innerHeight / 2) - 1000;
+    const scrollPosition = (window.scrollY + window.innerHeight / 2) - 1700;
 
     showObject(scrollPosition, section1Top, section2Top, section3Top, section4Top);
   });

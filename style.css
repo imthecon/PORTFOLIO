@@ -20,6 +20,7 @@ a:hover, a:active, a:focus {
 /* OVERALL */
 
 html, body { 
+    overflow: hidden;
     margin: 0;
     color: white;
 }
@@ -29,11 +30,13 @@ html, body {
 } */
 
 canvas {
-    position: fixed;
+    position: fixed;    /* Fix the canvas to the screen */
     top: 0;
     left: 0;
-
-    z-index: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;         /* Place canvas behind other content */
+    pointer-events: none;  /* Disable pointer events on canvas */
 }
 
     /* SMOOTH SCROLLING */
@@ -73,10 +76,11 @@ html.lenis {
 }
 
 .scroll-watcher {
-    height: 0.5vw;
+    height: 15px;
     position: fixed;
     top: 0;
-    z-index: 9111;
+    left: 0;
+    z-index: 9999;
     background: white;
     width: 100%;
     scale: 0 1;
@@ -103,7 +107,7 @@ article {
     background: rgb(0, 0, 0, 0.25);
 } */
 
-@keyframes color-change {
+/* @keyframes color-change {
     0% {
         background: #1b1b1a;
     }
@@ -115,7 +119,7 @@ article {
     30% {
         background: rgb(0, 0, 0, 0.25);
     }
-}
+} */
 
 #portfolio-bg {
     /* background-image: url(../img/tt\ gameplay.png);
@@ -262,14 +266,14 @@ h3 {
         opacity: 0;
         animation: fadeInBg ease forwards;
         animation-timeline: view();
-        animation-range: 3000px 3750px;
-    }
-
-    @keyframes fadeInBg {
-        to { opacity: 1; }
+        animation-range: 2000px 3500px;
     }
 
     @keyframes fadeIn {
+        to { scale: 1; opacity: 1; }
+    }
+
+    @keyframes fadeInBg {
         to { scale: 1; opacity: 1; }
     }
 
@@ -307,36 +311,46 @@ p, li {
     line-height: 4vh;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
     #hero {
-        position: relative;
         width: 100%;
-        height: 10vh;
-        overflow: hidden;
+        height: 90vh;
+        overflow: visible;
         display: flex;
         justify-content: center;
         align-items: center;
-        pointer-events: none;
     }
 }
 
 /* HOME */
 #hero {
-    position: relative;
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    height: 90vh;
+    overflow: visible;
     display: flex;
     justify-content: center;
     align-items: center;
-    pointer-events: none;
+}
+
+#hero h1 {
+    font-family: 'DM Sans';
+    font-weight: 600;
+    font-size: 5.5vw;
+    color: #fffef7;
+    text-shadow: 0vw 0.5vh rgb(134, 134, 134, 0.5);
+}
+
+#hero h3 {
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 2vw;
+    color: #fffce9;
+    text-shadow: 0vw 0.25vh rgb(134, 134, 134, 0.5);
+    margin-top: -2em;
 }
 
 #hero img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    width: 50px;
 }
 
 #hero :nth-child(5) {
@@ -352,38 +366,14 @@ p, li {
     translate: 0 2vh;
 }
 
-#parallax-text {
-    font-family: 'DM Sans';
-    font-weight: 600;
-    font-size: 7.5vw;
-    color: #fffef7;
-    text-shadow: 0vw 0.5vh rgb(134, 134, 134, 0.5);
-
-    position: relative;
-    translate: 10vw -37vh;
-}
-
-#parallax-text2 {
-    font-family: 'DM Sans';
-    font-weight: 400;
-    font-size: 2vw;
-    color: #fffce9;
-    text-shadow: 0vw 0.25vh rgb(134, 134, 134, 0.5);
-
-    position: relative;
-    translate: -24.5vw -27vh;
-}
-
-
-.media {
-    background: #1b1b1a;
-}
-
 .media-items {
+    position: relative;
     display: flex;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 5vw;
+    flex-direction: column;
+    gap: 40px;
     justify-content: center;
+    margin-left: 100px;
+    margin-top: 50px;
 }
 
 .media-items img {
@@ -396,6 +386,8 @@ p, li {
 }
 
 #menu {
+    z-index: 1;
+    position: relative;
     display: flex;
     justify-content: center;
 
@@ -412,7 +404,7 @@ p, li {
 }
 
 .menu-item {
-    color: white;
+    color: transparent;
     font-family: 'DM Sans';
     font-weight: 700;
     font-size: 5vw;
@@ -427,8 +419,8 @@ p, li {
     transition: 400ms ease;
 
     background: -webkit-linear-gradient(135deg, #ffbc00, #ff0058);
+    -wekbit-background-clip: text;
     background-clip: text;
-    color: transparent;
 }
 
 .rb-ul, .rb-ul-a {
@@ -609,6 +601,10 @@ p, li {
     font-weight: 700;
 }
 
+.container-we .box h3 {
+    margin-top: 25px;
+}
+
 /* .container-we .title::before {
     content: '';
     position: absolute;
@@ -647,13 +643,13 @@ p, li {
     content: '';
     position: absolute;
     z-index: -1;
-    top: 5%;
-    left: 2.5%;
-    width: 100%;
-    height: 55px;
+    top: -5%;
+    left: 40%;
+    width: 20%;
+    height: 110%;
     border-radius: 8px;
     
-    transform: skewX(-15deg);
+    transform: skewX(-20deg);
     transition: 500ms;
 
     background: linear-gradient(315deg, #ffbc00, #ff0058);
@@ -663,15 +659,15 @@ p, li {
     content: '';
     position: absolute;
     z-index: -1;
-    top: 5%;
-    left: 2.5%;
-    width: 100%;
-    height: 55px;
+    top: -5%;
+    left: 40%;
+    width: 2%;
+    height: 110%;
     border-radius: 8px;
 
     filter: blur(30px);
 
-    transform: skewX(-15deg);
+    transform: skewX(-20deg);
     transition: 500ms;
 
     background: linear-gradient(315deg, #ffbc00, #ff0058);
