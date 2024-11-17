@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const section3Top = document.getElementById('portfolio').offsetTop;
     const section4Top = document.getElementById('contact').offsetTop;
 
-    const scrollPosition = (window.scrollY + window.innerHeight / 2) - 1700;
+    const scrollPosition = (window.scrollY + window.innerHeight / 2) - 1250;
 
     showObject(scrollPosition, section1Top, section2Top, section3Top, section4Top);
   });
