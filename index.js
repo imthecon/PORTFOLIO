@@ -60,7 +60,7 @@ gltfLoader.load('https://sarder.ca/public/assets/monitor.glb', function(gltf) {
 });
 
 let phone;
-gltfLoader.load('https://sarder.ca/public/assets/monitor.glb', function(gltf) {
+gltfLoader.load('https://sarder.ca/public/assets/phone.glb', function(gltf) {
   phone = gltf.scene;
   phone.rotation.y = Math.PI / -3;
   phone.rotation.x = Math.PI / -1.1;
@@ -83,7 +83,7 @@ gltfLoader.load('https://sarder.ca/public/assets/monitor.glb', function(gltf) {
 });
 
 let briefcase;
-gltfLoader.load('https://sarder.ca/public/assets/monitor.glb', function(gltf) {
+gltfLoader.load('https://sarder.ca/public/assets/briefcase.glb', function(gltf) {
   briefcase = gltf.scene;
   briefcase.rotation.y = Math.PI / -4;
   briefcase.rotation.x = Math.PI / 8;
@@ -103,7 +103,7 @@ gltfLoader.load('https://sarder.ca/public/assets/monitor.glb', function(gltf) {
 });
 
 let mug;
-gltfLoader.load('https://sarder.ca/public/assets/monitor.glb', function(gltf) {
+gltfLoader.load('https://sarder.ca/public/assets/mug.glb', function(gltf) {
   mug = gltf.scene;
   mug.rotation.y = Math.PI / -3;
   mug.rotation.x = Math.PI / 1;
