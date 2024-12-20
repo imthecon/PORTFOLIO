@@ -23,7 +23,18 @@ html, body {
     overflow-x: hidden;
     overflow-y: auto;
     margin: 0;
+    padding: 0;
+    height: 100%;
     color: white;
+}
+
+#vanta-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
 }
 
 /* * {
@@ -268,7 +279,7 @@ h3 {
         opacity: 0;
         animation: fadeInBg ease forwards;
         animation-timeline: view();
-        animation-range: 2000px 3500px;
+        animation-range: 3250px 4000px;
     }
 
     @keyframes fadeIn {
@@ -310,7 +321,7 @@ p, li {
 
 .bigger {
     font-size: 2vw;
-    line-height: 4vh;
+    line-height: 2vw;
 }
 
 @media (max-width: 1280px) {
@@ -447,8 +458,8 @@ p, li {
     }
     
     .container-a .big {
-        font-size: 10rem !important;
-        margin-bottom: -5rem !important;
+        margin-bottom: 2.5rem !important;
+        margin-top: 2.5rem;
     }
     
     .container-a h3 {
@@ -1216,6 +1227,7 @@ p, li {
 }
 
 .container-a .box {
+    flex: 1; 
     text-align: center;
 
     opacity: 0.35;
@@ -1242,6 +1254,10 @@ p, li {
     font-size: 1.5rem;
     text-align: left;
     line-height: 2.5rem;
+}
+
+.container-a .big {
+    font-size: 4rem;
 }
 
 .container-a .box::before {
@@ -1282,16 +1298,6 @@ p, li {
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-.container-a .big {
-    font-size: 10vw;
-    font-weight: 700;
-    margin-bottom: -2rem;
-
-    /* background: -webkit-linear-gradient(#d8b800, #9b1a4b);
-    background-clip: text;
-    -webkit-text-fill-color: transparent; */
 }
 
 .container-a h3 {
