@@ -510,6 +510,14 @@ p, li {
         margin-right: 0.5rem;
     }
     
+    .container-we .image-credit {
+        width: 100% !important;
+    }
+    
+    .container-we h3 .kaushan-script {
+        font-size: 3rem;
+    }
+    
     .container-we h3 {
         position: relative;
         z-index: 2;
@@ -517,7 +525,7 @@ p, li {
         font-family: 'Public Sans';
         font-weight: 700;
         font-size: 2rem;
-        margin-bottom: 0;
+        width: 100% !important;
     }
     
     .container-we .box h3 {
@@ -1327,23 +1335,24 @@ p, li {
 
     margin-top: 2rem;
     margin-left: 5vw;
+    margin-bottom: 2rem;
     /* margin-right: 5vw; */
+}
+
+.container-we li {
+    line-height: 2.5rem;
 }
 
 .container-we .box {
     background: linear-gradient(rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0.075));
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    padding: 0.1vw 2vw 1vw 2vw;
+    padding: 1vw 2vw 1vw 2vw;
     margin: 2vw 2vw -1.5vw 0;
 
     opacity: 0.35;
     scale: 0.8;
     transition: 1s;
-}
-
-.container-we .box:nth-child(4) {
-    scale: 0.9;
 }
 
 .container-we .box:hover {
@@ -1356,6 +1365,14 @@ p, li {
     scale: 1;
 }
 
+.container-we .image-credit {
+    width: 200%
+}
+
+.container-we h3 .kaushan-script {
+    font-size: 3rem;
+}
+
 .container-we h3 {
     position: relative;
     z-index: 2;
@@ -1363,6 +1380,7 @@ p, li {
     font-family: 'Public Sans';
     font-weight: 700;
     font-size: 2rem;
+    width: 200%;
 }
 
 .container-we .box h3 {
@@ -1470,6 +1488,7 @@ p, li {
     row-gap: 20px;
     column-gap: 20px;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .container-we img {
