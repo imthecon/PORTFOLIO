@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* LINKS */
 a {
@@ -266,6 +267,10 @@ h3 {
     font-family: 'Kaushan Script';
 }
 
+.libre-franklin {
+    font-family: 'Libre Franklin';
+}
+
 @media (prefers-reduced-motion: no-preference) { /* prevents possible motion sickness to those with this setting turned on */
     .fadeIn {
         scale: 0.8;
@@ -354,7 +359,7 @@ p, li {
         padding: 1vw;
 
         width: 80% !important;
-        height: 40% !important;
+        height: 37.5% !important;
 
         opacity: 1;
         scale: 1;
@@ -650,6 +655,15 @@ p, li {
         margin-bottom: 0;
     }
 
+    .pf-title-2 {
+        position: relative;
+        display: inline-block;
+
+        margin-left: 5vw;
+        margin-right: 0.5rem;
+        margin-bottom: 0;
+    }
+
     .project-header {
         position: relative;
         margin-bottom: -5vh;
@@ -661,7 +675,7 @@ p, li {
         align-items: center;
     }
 
-    .project-one .project-summary {
+    .project-odd .project-summary {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -669,15 +683,23 @@ p, li {
         margin-top: -1rem;
     }
 
-    .project-two {
+    .project-even {
         position: relative;
 
         text-align: right;
         margin-right: 5vw;
     }
 
-    .project-two img {
+    .project-even img {
         margin-top: 1rem;
+    }
+
+    .pf-title-2 {
+        padding-bottom: 2vh;
+    }
+
+    .project-three .project-summary {
+        margin-bottom: -1.5vh;
     }
 
     .drag-info p {
@@ -694,7 +716,7 @@ p, li {
 
         width: 1rem !important;
         height: 1rem !important;
-        margin-left: 0.25rem !important;
+        margin-left: 0.35rem !important;
         background: white;
         border-radius: 1vw;
         padding: 0.5vw;
@@ -900,7 +922,7 @@ p, li {
         padding: 1vw;
 
         width: 70% !important;
-        height: 70% !important;
+        height: 65% !important;
 
         opacity: 1;
         scale: 1;
@@ -1546,6 +1568,20 @@ p, li {
     margin-bottom: 0;
 }
 
+.pf-title-2 {
+    position: relative;
+    display: inline-block;
+
+    /* for text below (only applies to third project) */
+    font-family: 'Libre Franklin';
+    font-weight: 600;
+    font-size: 5vw;
+    color: #fffef7;
+
+    margin-left: 5vw;
+    margin-bottom: 0;
+}
+
 .project-header {
     margin-bottom: -5vh;
 }
@@ -1760,7 +1796,7 @@ p, li {
     padding: 1vw;
 
     width: 640px;
-    height: 360px;
+    height: 380px;
 
     opacity: 1;
     scale: 1;
