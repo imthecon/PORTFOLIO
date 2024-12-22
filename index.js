@@ -294,6 +294,21 @@ window.addEventListener("resize", function() {
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
+// sets the canvas size to the initial viewport size (mobile resize issue)
+function setCanvasSize() {
+  const canvas = document.getElementById('bg');
+  const initialWidth = window.innerWidth;
+  const initialHeight = window.innerHeight;
+
+  canvas.width = initialWidth;
+  canvas.height = initialHeight;
+}
+
+setCanvasSize();
+
+window.addEventListener('resize', setCanvasSize);
+window.addEventListener('orientationchange', setCanvasSize);
+
 // // prevents the user from seeing every center object loaded in on top of each other if page is refreshed in the middle.
 // window.addEventListener('load', function() {
 //   var element = document.getElementById('bg');
