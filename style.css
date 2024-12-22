@@ -331,8 +331,8 @@ p, li {
 
 @media (max-width: 1280px) {
     canvas {
-        display: none;
-        pointer-events: none;
+        /* display: none;
+        pointer-events: none; */
     }
 
     .container-a {
@@ -369,8 +369,8 @@ p, li {
 
 @media (max-width: 768px) {
     canvas {
-        display: none;
-        pointer-events: none;
+        /* display: none;
+        pointer-events: none; */
     }
 
     #hero {
