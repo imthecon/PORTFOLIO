@@ -3,9 +3,10 @@ window.addEventListener('load', function() {
 });
 
 // THREE.JS
-import './style.css';
-// import * as THREE from 'three';
-// import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import * as THREE from 'three';
+import { GLTFLoader } from 'GLTFLoader';
+
+console.log(THREE);
 
 const scene = new THREE.Scene();
 

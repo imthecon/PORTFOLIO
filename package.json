@@ -15,7 +15,6 @@
   "dependencies": {
     "gh-pages": "^6.2.0",
     "lenis": "^0.0.2",
-    "materialize-css": "^1.0.0-rc.2",
-    "three": "^0.171.0"
+    "materialize-css": "^1.0.0-rc.2"
   }
 }
