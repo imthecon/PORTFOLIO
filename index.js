@@ -40,7 +40,7 @@ gltfLoader.load('https://sarder.ca/public/assets/monitor.glb', function(gltf) {
   monitor.rotation.y = Math.PI / -3;
   monitor.rotation.x = Math.PI / 1;
   monitor.rotation.z = Math.PI / 1;
-  monitor.scale.set(3, 3, 3);
+  monitor.scale.set(4, 4, 4);
   monitor.position.y = 1;
   
   monitor.traverse((child) => {
@@ -64,7 +64,7 @@ gltfLoader.load('https://sarder.ca/public/assets/phone.glb', function(gltf) {
   phone.rotation.z = Math.PI / 1;
   phone.position.y = -3.5;
   phone.position.x = -1.5;
-  phone.scale.set(3, 3, 3);
+  phone.scale.set(4, 4, 4);
   
   phone.traverse((child) => {
     if (child.isMesh) {
@@ -85,7 +85,7 @@ gltfLoader.load('https://sarder.ca/public/assets/briefcase.glb', function(gltf) 
   briefcase.rotation.y = Math.PI / -4;
   briefcase.rotation.x = Math.PI / 8;
   briefcase.rotation.z = Math.PI / 1;
-  briefcase.scale.set(3, 3, 3);
+  briefcase.scale.set(4, 4, 4);
   
   briefcase.traverse((child) => {
     if (child.isMesh) {
@@ -106,7 +106,7 @@ gltfLoader.load('https://sarder.ca/public/assets/mug.glb', function(gltf) {
   mug.rotation.x = Math.PI / 1;
   mug.rotation.z = Math.PI / 1.1;
   mug.position.y = -4;
-  mug.scale.set(3, 3, 3);
+  mug.scale.set(4, 4, 4);
   
   mug.traverse((child) => {
     if (child.isMesh) {
