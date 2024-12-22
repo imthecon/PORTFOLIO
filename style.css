@@ -338,8 +338,8 @@ p, li {
 
 @media (max-width: 1280px) {
     canvas {
-        width: 100vw !important;
-        height: 100vh !important;
+        width: 100% !important;
+        height: 100% !important;
     }
 
     .container-a {
@@ -376,8 +376,8 @@ p, li {
 
 @media (max-width: 768px) {
     canvas {
-        width: 100vw !important;
-        height: 100vh !important;
+        width: 100% !important;
+        height: 100% !important;
     }
 
     #hero {
