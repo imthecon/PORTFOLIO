@@ -204,7 +204,7 @@ function scaleObject(object, targetScale, duration = 250) {
 
 document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', function() {
-    const section1Top = document.getElementById('home').offsetTop;
+    const section1Top = document.getElementById('about').offsetTop;
     const section2Top = document.getElementById('work-experience').offsetTop;
     const section3Top = document.getElementById('portfolio').offsetTop;
     const section4Top = document.getElementById('contact').offsetTop;
