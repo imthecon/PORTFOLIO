@@ -27,7 +27,7 @@ renderer.render(scene, camera);
 
 // loads custom textures
 const textureLoader = new THREE.TextureLoader();
-const texture = textureLoader.load('assets/normal.png');
+const texture = textureLoader.load('https://sarder.ca/public/assets/normal.png');
 
 
 // loads custom gltf/glb objects (created by me in Blender)
