@@ -1330,15 +1330,13 @@ p, li {
 
 /* ABOUT ME */
 .container-a {
-    position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
     color: white;
     
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-top: -2.5vh;
-
+    width: 90%;
+    margin: 0 auto;
 }
 
 .container-a .box {
