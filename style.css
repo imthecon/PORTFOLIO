@@ -48,7 +48,7 @@ canvas {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: -1;
     pointer-events: none;
 }
 
@@ -280,12 +280,19 @@ h3 {
         animation-range: 200px 1000px;
     }
     
-    .fadeInBg {
+    /* .fadeInBg {
         opacity: 0;
-        animation: fadeInBg ease forwards;
-        animation-timeline: view();
-        animation-range: 3250px 4000px;
+        animation: fadeInBg 1s ease forwards;
     }
+    
+    @keyframes fadeInBg {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    } */
 
     @keyframes fadeIn {
         to { scale: 1; opacity: 1; }

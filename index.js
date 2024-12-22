@@ -18,7 +18,6 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setPixelRatio( window.devicePixelRatio );
 renderer.setSize( window.innerWidth, window.innerHeight );
-camera.position.setZ(30);
 
 renderer.render(scene, camera);
 
@@ -53,7 +52,7 @@ gltfLoader.load('https://sarder.ca/public/assets/monitor.glb', function(gltf) {
 
   scene.add(monitor);
   addObjects(monitor, 25);
-  monitor.visible = false;
+  monitor.visible = true;
 });
 
 let phone;
@@ -204,7 +203,7 @@ function scaleObject(object, targetScale, duration = 250) {
 
 document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', function() {
-    const section1Top = document.getElementById('about').offsetTop;
+    const section1Top = document.getElementById('home').offsetTop;
     const section2Top = document.getElementById('work-experience').offsetTop;
     const section3Top = document.getElementById('portfolio').offsetTop;
     const section4Top = document.getElementById('contact').offsetTop;
@@ -239,22 +238,27 @@ const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
 directionalLight.position.set(1, 0, 1);
 scene.add(ambientLight, directionalLight);
 
-const lightHelper = new THREE.PointLightHelper(pointLight);
-const gridHelper = new THREE.GridHelper(200, 50);
-// scene.add(lightHelper)
-
-// const controls = new OrbitControls(camera, renderer.domElement)
-
+// const lightHelper = new THREE.PointLightHelper(pointLight);
+// const gridHelper = new THREE.GridHelper(200, 50);
 
 // moves the camera relative to the user's position (from the top of the screen)
-let targetZ = camera.position.z;
+camera.position.z = 22.5;
+let targetZ = 22.5;
 let currentScroll = 0;
+let initialLoad = true;
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
 
-  currentScroll = t * -0.01;
-  targetZ = currentScroll;
+  if (initialLoad) {
+    currentScroll = 0;
+    initialLoad = false;
+  } else {
+    currentScroll = t * -0.01;
+  }
+
+  targetZ = currentScroll * 0.5 + 22.5;
+  camera.position.z += (targetZ - camera.position.z) * 0.01;
 }
 
 window.addEventListener('scroll', moveCamera);
@@ -273,7 +277,6 @@ document.addEventListener('mousemove', function(e) {
 
 // rotates the centered object (fix)
 function animate() {
-  camera.position.z += (targetZ - (camera.position.z * 1.5)) * 0.05;
   camera.position.x += (mouseX - camera.position.x) * 0.025;
   camera.position.y += (-mouseY - camera.position.y) * 0.025;
   camera.lookAt(scene.position);
