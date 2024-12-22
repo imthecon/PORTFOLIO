@@ -6,8 +6,6 @@ window.addEventListener('load', function() {
 import * as THREE from 'three';
 import { GLTFLoader } from 'GLTFLoader';
 
-console.log(THREE);
-
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
