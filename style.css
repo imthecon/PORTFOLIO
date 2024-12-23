@@ -76,8 +76,8 @@ html.lenis {
 	scrollbar-color: #404040 #1b1b1b !important;
 	scrollbar-width: auto !important;
 } */
-
-/* *::-webkit-scrollbar {
+/* 
+*::-webkit-scrollbar {
     width: 17px;
     background-color: #1b1b1b;
 }
@@ -95,7 +95,7 @@ html.lenis {
     background-color: #606060;
 } */
 
-:root {
+* {
     color-scheme: dark;
 }
 
@@ -119,6 +119,15 @@ html.lenis {
 }
 
 /* LOADER SCREEN */
+body.hide-scrollbar {
+    overflow: hidden;
+}
+
+body.show-scrollbar {
+    overflow: auto;
+    transition: overflow 1s ease-in-out;
+}
+
 #content {
     visibility: hidden;
     opacity: 0;

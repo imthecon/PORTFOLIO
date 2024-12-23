@@ -39,10 +39,13 @@
     </div>
     <script>
         $(window).on("load", function() {
+            $("body").addClass("hide-scrollbar")
+
             setTimeout(function() {
                 window.scrollTo(0, 0);
                 $(".loader-wrapper").fadeOut("slow", function() {
-                     $("#content").css("visibility", "visible").fadeTo("slow", 1);
+                    $("#content").css("visibility", "visible").fadeTo("slow", 1);
+                    $("body").removeClass("hide-scrollbar").addClass("show-scrollbar").fadeTo("slow", 1);
                 });
             }, 500);
         });
