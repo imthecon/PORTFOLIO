@@ -119,14 +119,14 @@ html.lenis {
 }
 
 /* LOADER SCREEN */
-body.hide-scrollbar {
+/* body.hide-scrollbar {
     overflow: hidden;
 }
 
 body.show-scrollbar {
     overflow: auto;
     transition: overflow 1s ease-in-out;
-}
+} */
 
 #content {
     visibility: hidden;
