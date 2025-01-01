@@ -432,7 +432,7 @@ p, li {
         margin-left: 5vw;
         margin-right: 5vw;
         margin-top: 2.5rem;
-        margin-bottom: 5rem;
+        margin-bottom: 5rem !important;
     }
 
     .container-a p {
@@ -527,7 +527,7 @@ p, li {
         margin-left: 5vw;
         margin-right: 5vw;
         margin-top: -5rem !important;
-        margin-bottom: 5rem;
+        margin-bottom: 5rem !important;
     }
 
     .container-a .box {
@@ -562,14 +562,14 @@ p, li {
     /* WORK EXPERIENCE */ 
     .container-we p, .container-we li {
         font-size: 1rem !important;
-        line-height: 2rem !important;
+        line-height: 1.5rem !important;
     }
     
     .container-we {
         display: flex !important;
         flex-direction: column-reverse;
     
-        margin-top: 0 !important;
+        margin-top: 2 !important;
         margin-left: 2rem !important;
         margin-right: 2rem !important;
     }
@@ -591,17 +591,12 @@ p, li {
         background: linear-gradient(rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0.075));
         border-radius: 15px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        padding: 1vw 10vw 1vw 10vw !important;
-        margin: 0 !important;
-        margin-bottom: -10vh !important;
+        padding: 1rem 2rem 1rem 2rem !important;
+        margin-bottom: -2rem !important;
     
         opacity: 0.35;
-        scale: 0.75 !important; 
+        scale: 0.8;
         transition: 1s;
-    }
-
-    .container-gu .box {
-        margin-bottom: -20vh !important;
     }
 
     .container-we .box:hover {
@@ -974,6 +969,10 @@ p, li {
     .container-p .text-details p, .container-p .text-details li {
         line-height: 1.5 !important;
         font-size: 0.75rem;
+    }
+
+    .container-p p {
+        font-size: 1rem;
     }
 
     .swiper {
@@ -1383,9 +1382,8 @@ p, li {
 }
 
 .container-a p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: left;
-    line-height: 2.5rem;
 }
 
 .container-a .big {
@@ -1477,7 +1475,7 @@ p, li {
 }
 
 .container-we li {
-    line-height: 2.5rem;
+    margin-top: -1.5vh;
 }
 
 .container-we .box {
@@ -1485,7 +1483,7 @@ p, li {
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     padding: 1vw 2vw 1vw 2vw;
-    margin: 2vw 2vw 0 0;
+    margin: 0vw 2vw 0 0;
 
     opacity: 0.35;
     scale: 0.8;
@@ -1721,6 +1719,8 @@ p, li {
 
 .container-p li {
     margin-top: -1.5vh;
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
 }
 
 .container-p {
