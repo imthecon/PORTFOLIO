@@ -243,6 +243,10 @@ img {
     text-indent: 3.5vw;
 }
 
+.footer p {
+    font-size: 1.5rem;
+}
+
 #top {
     display: block;
     visibility: hidden;
