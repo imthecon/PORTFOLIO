@@ -493,6 +493,15 @@ p, li {
         margin-top: -1.5rem;
     }
 
+    #hero h4 {
+        font-family: 'DM Sans';
+        font-weight: 400;
+        font-size: 1.25rem;
+        color: #fffce9;
+        text-shadow: 0vw 0.25vh rgb(134, 134, 134, 0.5);
+        margin-top: -1.5rem;
+    }
+
     article h2 {
         font-size: 3rem;
         text-align: center;
@@ -1261,6 +1270,16 @@ p, li {
     font-family: 'DM Sans';
     font-weight: 400;
     font-size: 2rem;
+    color: #fffce9;
+    text-shadow: 0vw 0.25vh rgb(134, 134, 134, 0.5);
+    margin-top: -1.5rem;
+    width: fit-content;
+}
+
+#hero h4 {
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 1.25rem;
     color: #fffce9;
     text-shadow: 0vw 0.25vh rgb(134, 134, 134, 0.5);
     margin-top: -1.5rem;
