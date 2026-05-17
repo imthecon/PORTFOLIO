@@ -14,6 +14,8 @@
 
     <link rel="icon" href="img/logo.png" type="image/x-icon">
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 
@@ -61,7 +63,7 @@
                 }
                 });
             }, {
-                threshold: 0.6 // % scrolled trigger (x% of viewport)
+                threshold: 0.15 // % scrolled trigger (x% of viewport)
             });
 
             document.querySelectorAll('.container-appear').forEach(el => observer.observe(el));
@@ -69,66 +71,70 @@
     </script>
 
     <div id="content">
+        <!-- Home -->
         <header id="home">
-            <!-- Home -->
-            <div class="media">
-                <div id="hero">
-                    <div>
-                        <h1>hi, i'm sarder,</h1>
+            <div id="hero">
+                <div>
+                    <div class="main-header">
+                        <h1>hi, i'm sarder</h1>
                         <h3><i>an aspiring student preparing to enter the real world.</i></h3>
+                    </div>
+                    <div class="container-info">
                         <div>
-                            <h4><i>• if you're on <b>desktop</b>, hover over translucent boxes to highlight the container.</i></h4>
-                            <h4><i>• if you're on <b>mobile</b>, click on translucent boxes to highlight the container.</i></h4>
+                            <h4><span class="material-icons">desktop_windows</span><i>If you're on <b>DESKTOP</b>, hover over translucent boxes to highlight the container.</i></h4>
+                        </div>
+                        <div>
+                            <h4><span class="material-icons">phone_iphone</span><i>If you're on <b>MOBILE</b>, click on translucent boxes to highlight the container.</i></h4>
                         </div>
                     </div>
-                    <div class="media-items public-sans">
-                        <div>
-                            <img src="img/linkedin.svg" alt="LinkedIn" class="media-item noBorder">
-                            <a href="https://www.linkedin.com/in/sarderr/" class="rb-ul-a">/sarderr</a>
-                        </div>
-                            <!-- <img src="img/github.svg" alt="GitHub"> -->
-                        <div>
-                            <img src="img/instagram.svg" alt="Instagram" class="media-item noBorder">
-                            <a href="https://www.instagram.com/sxrder/" class="rb-ul-a">@sxrder</a>
-                        </div>
-                        <div>
-                            <img src="img/discord.svg" alt="Discord" class="media-item noBorder">
-                            <a href="https://discord.com/channels/@me" class="rb-ul-a">imthecon</a>                
-                        </div>
-                        <div>
-                            <img src="img/github.svg" alt="Github" class="media-item noBorder">
-                            <a href="https://github.com/imthecon" class="rb-ul-a">/imthecon</a>                
-                        </div>
+                </div>
+                <div class="media-items public-sans">
+                    <div>
+                        <img src="img/linkedin.svg" alt="LinkedIn" class="media-item noBorder">
+                        <a href="https://www.linkedin.com/in/sarderr/" class="rb-ul-a">/sarderr</a>
+                    </div>
+                    <div>
+                        <img src="img/instagram.svg" alt="Instagram" class="media-item noBorder">
+                        <a href="https://www.instagram.com/sxrder/" class="rb-ul-a">@sxrder</a>
+                    </div>
+                    <div>
+                        <img src="img/discord.svg" alt="Discord" class="media-item noBorder">
+                        <a href="https://discord.com/channels/@me" class="rb-ul-a">imthecon</a>                
+                    </div>
+                    <div>
+                        <img src="img/github.svg" alt="Github" class="media-item noBorder">
+                        <a href="https://github.com/imthecon" class="rb-ul-a">/imthecon</a>                
                     </div>
                 </div>
             </div>
+        </header>
+
+        <hr class="fadeInHr">
 
         <main id="body">
             <article>
-                <br id="selection-area"><br><br><br><br><br>
-                
-                <!-- Section selector -->
-                <div data-tilt data-tilt-full-page-listening id="menu" class="full-card container-appear">
-                    <p class="fadeIn" id="menu-items" class="glow">
-                        <a href="#home" class="menu-item rb-glow">Home / hero</a>
-                        <a href="#about" class="menu-item rb-glow">About me</a>
-                        <a href="#work-experience" class="menu-item rb-glow">volunteering</a>
-                        <a href="#portfolio" class="menu-item rb-glow">My portfolio</a>
-                        <!-- <a href="#gallery" class="menu-item"><s>My gallery</s></a> -->
-                        <a href="#contact" class="menu-item rb-glow">Contact me</a>
-                    </p>
-                </div>
+                <section id="selection-area" class="center-screen">
+                    <!-- Section selector -->
+                    <div data-tilt data-tilt-full-page-listening id="menu" class="full-card container-appear">
+                        <p id="menu-items" class="fadeIn glow">
+                            <a href="#home" class="menu-item rb-glow">hi, i'm sarder</a>
+                            <a href="#about" class="menu-item rb-glow">about me</a>
+                            <a href="#work-experience" class="menu-item rb-glow">volunteering</a>
+                            <a href="#portfolio" class="menu-item rb-glow">my portfolio</a>
+                            <a href="#contact" class="menu-item rb-glow">contact me</a>
+                        </p>
+                    </div>
+                    
+                    <!-- Back to top -->
+                    <a id="top" href="#selection-area">≡</a>
+                </section>
 
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                
-                <!-- Back to top -->
-                <a id="top" href="#selection-area">≡</a>
                 <script>
                     document.addEventListener('DOMContentLoaded', function() {
                         var backToTop = document.getElementById("top");
 
                         function updateButtonVisibility() {
-                            if (window.scrollY > 1500) {
+                            if (window.scrollY > 2000) {
                                 backToTop.classList.add("visible");
                             } else {
                                 backToTop.classList.remove("visible");
@@ -142,13 +148,15 @@
                 </script>
             </article>
 
-        <!-- About me -->
+            <hr class="fadeInHr">
+
+            <!-- About me -->
             <article id="about">
-                <canvas id="bg" class="fadeInBg"></canvas>
+                <canvas id="bg"></canvas>
                 <br>
                 
                 <div class="container-appear">
-                    <h2 class="new-id">| About me</h2>
+                    <h2>| About me</h2>
                 </div>
 
                 <div class="container-a">
@@ -172,24 +180,25 @@
                         </div>
                     </div>
                 </div>
-                <br><br><br>
             </article>
+
+            <hr class="fadeInHr">
         
-        <!-- Work experience -->
+            <!-- Work experience -->
             <article id="work-experience">
                 <br>
 
                 <div class="container-appear">
-                    <h2 class="new-id">| Volunteering</h2>
+                    <h2>| Volunteering</h2>
                 </div>
 
-                <section id="fadeIn">
-                    <div class="container-we container-gu fadeIn">
+                <section>
+                    <div class="container-appear we-title">
+                        <h3>Geering Up @ the UBC Vancouver Campus (August 2024)</h3>
+                        <p class="image-credit"><i>First image - UBC via https://ubcproperties.com/project/engineering-student-centre-esc/</i></p>
+                    </div>
+                    <div class="container-we container-gu">
                         <div class="box-text">
-                            <div class="container-appear">
-                                <h3 class="public-sans title"><b><span class="kaushan-script bigger">Geering Up </span>@ the UBC Vancouver Campus (August 2024)</b></h3>
-                                <p class="image-credit"><i>First image - UBC via https://ubcproperties.com/project/engineering-student-centre-esc/</i></p>
-                            </div>
                             <div class="card box container-appear gradient-glow">
                                 <h3 class="topic">Responsibilites:</h3>
                                 <ul>
@@ -215,12 +224,12 @@
                             </div>
                             <div class="card box container-appear gradient-glow">
                                 <h3 class="topic">What I learned:</h3>
-                                <p>Despite having some knowledge of how to code, I found out that there's always more stuff to learn, even at the beginner level. I refined my rusty skills through helping other younger students and presenting a Flappy Bird demo with my coworkers. The next week, I learned how to use a Turing Tumble by explaining logic gates and binary to other high school students (super duper fun). And in the final week, I helped grade 5-6 students use Java to make diversive colour-changing patterns and taught how to create an advanced version of PONG in Scratch (the old-reliable).</p>
+                                <p>At this point in time, I had decent knowledge of how to code, but I found out that there's always more stuff to learn. I refined my basic skills through helping other younger students and presenting a Flappy Bird demo with my coworkers. The next week, I learned how to use a Turing Tumble by explaining logic gates and binary to other high school students (super duper fun). And in the final week, I helped grade 5-6 students use Java to make diversive colour-changing patterns and taught how to create an advanced version of PONG in Scratch (the old-reliable).</p>
                                 <p>The best learning experience was working with others. Prior to volunteering at Geering Up, it's been difficult finding ways to cooperate and balance projects with others (there's always someone doing more work than everyone else). In all the three weeks I volunteered, everyone I worked with was amazing, doing their parts in every presentation, speaking equal amounts, and helping out anyone who needed help.</p>
                             </div>
                             <div class="card box container-appear gradient-glow">
                                 <h3 class="topic">My gratitude:</h3>
-                                <p>Playing sports outside like football and soccer, learning new games, and racing the kids (and letting them win) was definitely a learning experience on its own. It's unfortunate I can't come back to volunteer after graduation. But the bottom line: I spent the valuable time I had on the UBC campus teaching my favourite programming languages, eating lunch with friends, and just having a good time.</p>
+                                <p>Playing sports outside like football and soccer, learning new games, and racing the kids (and letting them win) was definitely a learning experience on its own. It's unfortunate I can't come back to volunteer after graduation. But the bottom line is that I spent the valuable time I had on the UBC campus teaching my favourite programming languages, eating lunch with friends, and just having a good time.</p>
                                 <p>I learned from my time at Science World that it's difficult to keep the friends you got during the volunteering experience (espeically when most of them live in Vancouver and you live in a whole different city). Though I'm always grateful to the other Junior Instructors for making the helping and teaching process so fun and enjoyable.</p>
                                 <p>To the official instructors and my three employers, thank you for aligning my schedule every week with a coding camp, it was incredibly fun being (sort of) a teacher for a change. I appreciate the personal "Thanks!"/appreaction e-mails from each of my instructor groups. It's always a pleasure branching out from my house from time to time, and if I had the chance, I'd do it again.</p>
                                 <!-- <p>As a final note, I enjoyed every moment of my placement (especially the one-hour long lunch breaks). If I ever had the chance, I would go back and do it all over again.</p> -->
@@ -238,55 +247,58 @@
                         </div>
                     </div>
                 </section>
-                <br><br>
+
+                <br>
+                
                 <section id="science-world fadeIn">
+                    <div class="container-appear we-title">
+                        <h3>Science World @ Vancouver, B.C. (July - August 2023)</h3>
+                        <p class="image-credit"><i>First image - Adi K via https://www.pexels.com/photo/science-world-by-lake-in-vancouver-18197132/</i></p>
+                    </div>
                     <div class="container-we we-inverse-1 fadeIn">
                         <div class="box-text">
-                            <div class="exclude-inv container-appear">
-                                <h3 class="public-sans title"><b><span class="kaushan-script bigger">Science World </span>@ Vancouver, B.C. (July - August 2023)</b></h3>
-                                <p class="image-credit"><i>First image - Adi K via https://www.pexels.com/photo/science-world-by-lake-in-vancouver-18197132/</i></p>
+                            <div class="card box container-appear gradient-glow">
+                                <h3 class="topic">Responsibilites:</h3>
+                                <ul>
+                                    <li>
+                                        <p>Provided visitors with a friendly, awesome, and memorable experience.</p>
+                                    </li>
+                                    <li>
+                                        <p>Provided learning opportunities and information to family and children through gallery walkthroughs, demonstrations, and explanations.</p>
+                                    </li>
+                                    <li>
+                                        <p>Assisted with school group entry and exits during school visits.</p>
+                                    </li>
+                                    <li>
+                                        <p>Assisted with security measures and lost children/family searches.</p>
+                                    </li>
+                                    <li>
+                                        <p>Modelled and reinforcing Science World's health, safety, and security policies.</p>
+                                    </li>
+                                    <li>
+                                        <p>Answered any questions asked by visitors and provided gallery and exhibit recommendations.</p>
+                                    </li>
+                                    <li>
+                                        <p>Cooperated with staff and coworkers to ensure fluid operation and communication.</p>
+                                    </li>
+                                </ul>
                             </div>
-                                <div class="card box container-appear gradient-glow">
-                                    <h3 class="topic">Responsibilites:</h3>
-                                    <ul>
-                                        <li>
-                                            <p>Provided visitors with a friendly, awesome, and memorable experience.</p>
-                                        </li>
-                                        <li>
-                                            <p>Provided learning opportunities and information to family and children through gallery walkthroughs, demonstrations, and explanations.</p>
-                                        </li>
-                                        <li>
-                                            <p>Assisted with school group entry and exits during school visits.</p>
-                                        </li>
-                                        <li>
-                                            <p>Assisted with security measures and lost children/family searches.</p>
-                                        </li>
-                                        <li>
-                                            <p>Modelled and reinforcing Science World's health, safety, and security policies.</p>
-                                        </li>
-                                        <li>
-                                            <p>Answered any questions asked by visitors and provided gallery and exhibit recommendations.</p>
-                                        </li>
-                                        <li>
-                                            <p>Cooperated with staff and coworkers to ensure fluid operation and communication.</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="card box container-appear gradient-glow">
-                                    <h3 class="topic">What I learned:</h3>
-                                    <p>During my volunteer work at Science World, I regularly guided galleries and exhibits to visitors of all ages, ensuring clear and understandable explanations.</p>
-                                    <p>Working alongside a diverse team of student and expert coworkers, we optimized a well-flowing workspace, allowing everyone to perform their duties as efficiently as possible. </p>
-                                    <p>My experience at Science World completely refined my ability in effectively communicating complex information, working in a team setting, and adapting to different responsibilities.</p>
-                                </div>
-                                <div class="card box container-appear gradient-glow">
-                                    <h3 class="topic">My gratitude:</h3>
-                                    <p>I'm grateful to all my peers who volunteered in the same cohort for making every single moment a fun and enjoyable one. They were the ones who entertained me during my breaks, made me confident in demonstrating activities to children, and brought a smile to my face at any time.</p>
-                                    <p>A big, big thanks to all of the official Science Facilitators at Science World and my HSWE employer. I thank them for not only giving me the opportunity to work at such a lively place at a beautiful location but to teach me so much that I could take away. They helped me realize that the work industry is as wonderful as you make it.</p>
-                                </div>
+                            <div class="card box container-appear gradient-glow">
+                                <h3 class="topic">What I learned:</h3>
+                                <p>During my volunteer work at Science World, I regularly guided galleries and exhibits to visitors of all ages, ensuring clear and understandable explanations.</p>
+                                <p>Working alongside a diverse team of student and expert coworkers, we optimized a well-flowing workspace, allowing everyone to perform their duties as efficiently as possible. </p>
+                                <p>My experience at Science World completely refined my ability in effectively communicating complex information, working in a team setting, and adapting to different responsibilities.</p>
                             </div>
+                            <div class="card box container-appear gradient-glow">
+                                <h3 class="topic">My gratitude:</h3>
+                                <p>I'm grateful to all my peers who volunteered in the same cohort for making every single moment a fun and enjoyable one. They were the ones who entertained me during my breaks, made me confident in demonstrating activities to children, and brought a smile to my face at any time.</p>
+                                <p>A big, big thanks to all of the official Science Facilitators at Science World and my HSWE employer. I thank them for not only giving me the opportunity to work at such a lively place at a beautiful location but to teach me so much that I could take away. They helped me realize that the work industry is as wonderful as you make it.</p>
+                            </div>
+                        </div>
                         <div class="box-img we-inverse-2">
-                            <div class="container-appear">
+                            <div class="we-gallery container-appear">
                                 <img src="https://images.pexels.com/photos/18197132/pexels-photo-18197132/free-photo-of-science-world-by-lake-in-vancouver.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Science World" class="card big-img">
+                                <img id="#2" src="img/science world (interior).png" alt="The interior of Science World (second floor, above center)" class="card">
                             </div>
                             <div class="we-gallery container-appear">
                                 <img id="#1" src="img/lego.PNG" alt="BrickWorks at Science World" class="card">
@@ -295,16 +307,16 @@
                         </div>
                     </div>
                 </section>
-
-                <br>
             </article>
 
-        <!-- My portfolio -->
+            <hr class="fadeInHr">
+
+            <!-- My portfolio -->
             <article id="portfolio">
                 <br>
                 
                 <div class="container-appear">
-                    <h2 class="new-id">| My portfolio</h2>
+                    <h2>| My portfolio</h2>
                 </div>
 
                 <article id="portfolio-sub">
@@ -312,29 +324,26 @@
                         <div class="project-header project-one">
                             <div class="project-summary container-appear">
                                 <br>
-                                <img src="img/tt logo.png" alt="Tap Transit - a Metro-Vancouver-based cookie clicker" title="Tap Transit" class="pf-title noBorder">
+                                <img src="img/tt logo.png" alt="Tap Transit - a Metro-Vancouver-based cookie clicker" title="Tap Transit" class="pf-title-1 noBorder">
                                 <img src='img/pythonlogo.png' class="tools box-glow">
                                 <img src='img/pygame.png' class="tools box-glow">
                                 <img src='img/piskel logo.png' class="tools box-glow">
-                            </div>
-                            <div class="drag-info container-appear">
-                                <p><i>*Drag on gallery to switch slides</i></p>
                             </div>
                         </div>
                         <div class="container-p">
                             <div class="swiper mySwiper container-appear">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="img/tt title page.PNG" alt="Tap Transit - title page" height="450">
+                                        <img src="img/tt title page.PNG" alt="Tap Transit - title page">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="img/tt gameplay.png" alt="Tap Transit - gameplay" height="450">
+                                        <img src="img/tt gameplay.png" alt="Tap Transit - gameplay">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="img/tt itch page.PNG" alt="Tap Transit - itch page" height="450">
+                                        <img src="img/tt itch page.PNG" alt="Tap Transit - itch page">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="img/tt piskel.PNG" alt="Tap Transit - piskel test" height="450">
+                                        <img src="img/tt piskel.PNG" alt="Tap Transit - piskel test">
                                     </div>
                                 </div>
                                 <div class="swiper-pagination"></div>
@@ -370,22 +379,19 @@
                         </div>
                     </section>
                     <br>
-                    <section class="big-card fadeIn">
-                        <div class="project-header project-even">
+                    <section class="big-card fadeIn project-even">
+                        <div class="project-header project-two">
                             <div class="project-summary container-appear">
-                                <p class="pf-title">hi, i'm sarder</p>
+                                <p class="pf-title-2">hi, i'm sarder</p>
                                 <img src='img/html logo.png' class="tools box-glow">
                                 <img src='img/css logo.png' class="tools box-glow">
                                 <img src='img/js logo.png' class="tools box-glow">
                                 <img src='img/threejs logo.png' class="tools box-glow">
                                 <img src='img/blender logo.png' class="tools box-glow">
                             </div>
-                            <div class="drag-info container-appear">
-                                <p><i>*Drag on gallery to switch slides</i></p>
-                            </div>
                         </div>
                         <div class="container-p">
-                            <div class="box-text container-appear">
+                            <div class="box-text container-appear p-inverse-1">
                                 <p class="card bigger dm-sans gradient-glow"><b>A <span class="kaushan-script">portfolio website</span> (the one you're on right now) created from scratch after self-learning HTML, CSS, and JavaScript (Vanilla, Three.js).</b></p>
                                 <div class="card text-details container-appear gradient-glow">
                                     <p><b>Approximate time taken</b>: 2 months</p>
@@ -413,19 +419,19 @@
                                     <p class="big"><b>Website link</b>: <i><a href="https://sarder.ca" class="rb-ul-a">https://sarder.ca</a></i></p>
                                 </div>
                             </div>
-                            <div class="swiper mySwiper container-appear">
+                            <div class="swiper mySwiper container-appear p-inverse-2">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="img/about me.png" alt='"about me" page' height="450">
+                                        <img src="img/about me.png" alt='"about me" page'>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="img/menu.png" alt='"menu" page' height="450">
+                                        <img src="img/menu.png" alt='"menu" page'>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="img/gallery.png" alt="Tap Transit gallery" height="450">
+                                        <img src="img/gallery.png" alt="Tap Transit gallery">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="img/title page.png" alt="title page" height="450">
+                                        <img src="img/title page.png" alt="title page">
                                     </div>
                                 </div>
                                 <div class="swiper-pagination"></div>
@@ -434,31 +440,28 @@
                     </section>
                     <br>
                     <section class="big-card fadeIn">
-                        <div class="project-header project-odd project-three">
+                        <div class="project-header project-three">
                             <div class="project-summary container-appear">
-                                <p class="pf-title-2">change</p>
+                                <p class="pf-title-3">change</p>
                                 <img src='img/js logo.png' class="tools box-glow">
                                 <img src='img/react logo.png' class="tools box-glow">
                                 <img src='img/expo go logo.png' class="tools box-glow">
-                            </div>
-                            <div class="drag-info container-appear">
-                                <p><i>*Drag on gallery to switch slides</i></p>
                             </div>
                         </div>
                         <div class="container-p">
                             <div class="swiper mySwiper container-appear">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="img/change-comp1.jpg" alt="change compilation images - 1" height="450">
+                                        <img src="img/change-comp1.jpg" alt="change compilation images - 1">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="img/change-comp2.jpg" alt="change compilation images - 2" height="450">
+                                        <img src="img/change-comp2.jpg" alt="change compilation images - 2">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="img/change-title.PNG" alt="change compilation images - 1" height="450">
+                                        <img src="img/change-title.PNG" alt="change compilation images - 1">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="img/my-journal.PNG" alt="change compilation images - 1" height="450">
+                                        <img src="img/my-journal.PNG" alt="change compilation images - 1">
                                     </div>
                                 </div>
                                 <div class="swiper-pagination"></div>
@@ -483,9 +486,6 @@
                                             <li>
                                                 <p>Created customization functions like purchasable avatars (with the in-app currency of "stars") and page background colours.</p>
                                             </li>
-                                            <li>
-                                                <p><i>*Side note: let me know if you want me to eventually release a fuller version of change in the future!</i></p>
-                                            </li>
                                         </i>
                                     </ul>
                                     <p class="big"><b>No official release available as of now.</b></p>
@@ -493,16 +493,17 @@
                             </div>
                         </div>
                     </section>
-                    <br>
                 </article>
             </article>
 
-        <!-- Contact me -->
+            <hr class="fadeInHr">
+
+            <!-- Contact me -->
             <article id="contact">
                 <br>
 
                 <div class="container-appear">
-                    <h2 class="new-id">| Contact me</h2>
+                    <h2>| Contact me</h2>
                 </div>
 
                 <section class="contact fadeIn">
@@ -525,7 +526,7 @@
                 </section>
                 <section class="footer">
                     <div class="container-appear">
-                        <p><i>&copy; 2025 hi, i'm sarder</i></p>
+                        <p><i>&copy; 2026 hi, i'm sarder</i></p>
                     </div>
                 </section>
                 <br>
@@ -569,7 +570,7 @@
             VanillaTilt.init(document.querySelectorAll(".card"), {
                 transition: true,
                 speed: 750,
-                max: 10,
+                max: 5,
             });
 
             VanillaTilt.init(document.querySelectorAll(".full-card"), {
@@ -609,25 +610,6 @@
                 },
             });
         </script>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
-        <script>
-            VANTA.FOG({
-                el: "#vanta-canvas",
-                mouseControls: true,
-                touchControls: true,
-                gyroControls: true,
-                minHeight: window.innerHeight,
-                minWidth: window.innerWidth,
-                highlightColor: 0x19191a,
-                midtoneColor: 0x1b1c1c,
-                lowlightColor: 0x121212,
-                baseColor: 0x000000,
-                zoom: 0.5,
-            })
-        </script>
-
     </footer>
 </body>
 
